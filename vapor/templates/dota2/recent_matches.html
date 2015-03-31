@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% load dota %}
+
+{% block page %}matches{% endblock %}
+
+{% block content %}
+<header class="site-head-default">
+	<h1>Recent Matches</h1>
+</header>
+<ul>
+{% for match in match_data.result.matches %}
+	<li><h2>{{ match.match_id }}</h2>
+		Match Starttime: {{ match.start_time }} <br />
+		<strong>players:</strong>
+
+		{% for player in match.players %}
+		<ul>
+			<li>{{ player.account_id|steam_name }} (id: {{ player.account_id }})</li>
+			<li>hero: {{ player.hero_id|get_hero_name }}</br>
+				hero id:{{ player.hero_id }}</li>
+		</ul>
+		{% endfor %}
+	<hr />
+	</li>
+{% endfor %}
+</ul>
+
+{{match_data}}
+{% endblock %}

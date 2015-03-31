@@ -1,0 +1,23 @@
+{% extends 'base.html' %}{% load dota %}
+
+{% block page %}matches{% endblock %}
+
+{% block content %}
+	<ul class="unstyled">
+		{% for match in matches %}
+			<li><h2>{{ match.match_id }}</h2>
+				Match Starttime: {{ match.start_time }} <br />
+				<strong>players:</strong>
+
+				{% for player in match.players %}
+				<ul>
+					 <li>account id: {{ player.account_id|steam_name }}</li>
+					 <li>hero id:{{ player.hero_id }}</li>
+				</ul>
+				{% endfor %}
+
+				<hr />
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

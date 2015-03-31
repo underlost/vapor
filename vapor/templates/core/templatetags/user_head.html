@@ -1,0 +1,29 @@
+<header class="site-head-default">
+	<div id="avatar"><img src="{{steam_profile.avatar_medium}}" /></div>
+	<h1><a href="{{steam_profile.profile_url}}" title="View {{steam_profile.persona}}'s Steam Profile" id="profile-link">{{steam_profile.persona}} <span>({{steam_profile.real_name}})</span></a></h1>
+	<div id="status">
+		{% if steam_profile.current_game.gameid == None %}
+			<span class="inchat">{% if status == 0 %}Offline (Last Online: {{last_online|date:"F j, Y"}}){% endif %}
+			{% if steam_profile.status == 1 %}Online{% endif %}
+			{% if steam_profile.status == 2 %}Busy{% endif %}
+			{% if steam_profile.status == 3 %}Away{% endif %}
+			{% if steam_profile.status == 4 %}Snooze{% endif %}</span>
+		{% else %}
+			<span class="ingame"><strong>In-Game:</strong> {{steam_profile.current_game.gameid}}</span>
+		{% endif %}
+	</div>
+</header>
+
+<nav class="navbar navbar-inverse">
+	<ul class="nav navbar-nav">
+		<li><a href="{% url 'Core:Profile' steam_profile.vanity %}">Games List</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Backpacks <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="{% url 'Core:tf2backpack' steam_profile.vanity %}">Team Fortress 2</a></li>
+				<li><a href="#">Dota 2</a></li>
+				<li><a href="#">Portal 2</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>

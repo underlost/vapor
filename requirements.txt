@@ -1,0 +1,20 @@
+#Heroku
+Django>=1.7
+gunicorn>=19.1.1
+psycopg2==2.5.1
+dj-database-url==0.2.0
+dj-static
+wsgiref==0.1.2
+celery>=2.3.3
+django-celery>=3.0.11
+django-picklefield
+newrelic
+gevent
+
+#Cache
+django-redis-cache>=0.13.0
+
+#Site Specific
+steamodd>=4.17
+dota2py>=0.1.3
+requests>=2.5.1

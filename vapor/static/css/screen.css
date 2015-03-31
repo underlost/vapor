@@ -1,0 +1,179 @@
+/* @override 
+	http://media.underlost.net/css/vapor.css
+	http://media.underlost.net/vapor/css/screen.css
+	http://damp-forest-6458.herokuapp.com/static/css/screen.css
+*/
+
+html {
+	background: #1f1f1f;
+
+}
+
+body {
+	background: #1f1f1f;
+	color: #666;
+	text-align: justify;
+	-webkit-hyphens: auto;
+	margin: 0 auto;
+	text-rendering: optimizeLegibility;
+	max-width: 910px;
+}
+
+a {color: #62a7e3;text-decoration: none;}
+a:hover {color: #eee;}
+
+hr.indent {
+	height: 0;
+	border-top: 1px solid #191919;
+	border-bottom: 1px solid #333;
+}
+
+header {
+	background: url('../img/steam.png') 80% top no-repeat;
+	padding: 50px 0 20px;
+	margin: 15px 0 0px;
+	height: 64px;
+}
+
+header #avatar {
+	float: left;
+	width: 64px;
+	margin-right: 15px;
+	padding-left: 2px;
+}
+
+header h1{
+	font-size: 125%;
+	margin-bottom: 0;
+	line-height: 150%;
+	
+}
+
+header h1 a {
+	color: #e1e1e1;
+}
+
+header h1 a span {
+	font-weight: normal;
+	color: #858585;
+}
+
+header div#status {
+}
+
+header div#status span.inchat{
+	color: #62a7e3;	
+}
+
+header div#status span.ingame{
+	color: #9cce59;	
+}
+
+ul.itemlist {
+	height: 406px;
+}
+
+ul.itemlist li {
+	float: left;
+	background: #232323;
+	margin: 1px;
+	-webkit-border-radius: 5px;
+	position: relative;
+}
+
+ul.itemlist li img {
+	display: ;
+	max-width: 180px;
+}
+
+ul.itemlist li span.quality {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	font-size: 24px;
+}
+
+ul.itemlist li span.genuine {
+	color: #4d7455;
+}
+
+ul.itemlist li span.unique {
+	color: #7d6d00;
+}
+
+ul.itemlist li span.vintage {
+	color: #476291;
+}
+
+body .pagination a {
+	background: #232323;
+	border-color: #1f1f1f;
+}
+
+body .pagination a:hover {
+	background: #232323;
+}
+
+.active_page{
+	color: #9cce59;	
+}
+
+footer {
+	display: block;
+	padding-top: 10px;
+	border-top: 1px solid #232323;
+}
+
+footer a {
+	color: #bbb;
+}
+
+div.topbar-wrapper {
+  position: relative;
+  height: 40px;
+  margin: 2px 0 5px;
+}
+
+div.topbar-wrapper div.topbar {
+  position: absolute;
+  margin: 0;
+  text-align: left;
+}
+
+div.topbar-wrapper div.topbar .topbar-inner {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+div.topbar-wrapper div.topbar ul.secondary-nav {
+	padding-right: 10px;
+}
+
+#search-frontpage {
+	text-align: center;
+	margin-top: 150px;
+	padding-top: 75px;
+	background: url('../img/steam.png') center top no-repeat;
+
+}
+
+#search-frontpage h1 {
+	margin-bottom: 25px;
+	text-shadow: rgba(0,0,0,0.35) 0 2px 3px;
+	font-family: 'ff-meta-web-pro', sans-serif;
+	font-size: 45px;
+	font-weight: 700;	
+	text-transform: capitalize;
+}
+
+#search-frontpage h1:after {
+	content: '.';
+}
+
+#search-frontpage input {
+	display: none;
+}
+
+body.index footer {
+	text-align: center;
+}

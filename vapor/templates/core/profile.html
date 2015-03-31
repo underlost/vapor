@@ -1,0 +1,25 @@
+{% extends 'base.html' %}{% load steamPersona %}
+
+{% block page %}profile{% endblock %}
+
+{% block content %}
+{% render_profile_head vanity_id %}
+
+<h2>Total games: {{game_count}} <small>({{games_played|length}} played)</small></h2>
+
+<ul class="media-list">
+{% for game in games_list|dictsort:"playtime_forever" reversed %}
+<li class="media">
+	<div class="media-left">
+		<a href="#">
+			<img class="media-object img-rounded" src="http://media.steampowered.com/steamcommunity/public/images/apps/{{game.appid}}/{{game.img_icon_url}}.jpg" alt="{{game.name}}">
+		</a>
+	</div>
+	<div class="media-body">
+		<h4 class="media-heading">{{game.name}}</h4>
+		({{game.playtime_forever|sectodur}} played)
+	</div>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

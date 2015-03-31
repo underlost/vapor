@@ -1,0 +1,160 @@
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+// Reset and dependencies
+@import "normalize.less";
+@import "print.less";
+@import "glyphicons.less";
+
+// Core CSS
+@import "scaffolding.less";
+@import "type.less";
+@import "code.less";
+@import "grid.less";
+@import "tables.less";
+@import "forms.less";
+@import "buttons.less";
+
+// Components
+@import "component-animations.less";
+@import "dropdowns.less";
+@import "button-groups.less";
+@import "input-groups.less";
+@import "navs.less";
+@import "navbar.less";
+@import "breadcrumbs.less";
+@import "pagination.less";
+@import "pager.less";
+@import "labels.less";
+@import "badges.less";
+@import "jumbotron.less";
+@import "thumbnails.less";
+@import "alerts.less";
+@import "progress-bars.less";
+@import "media.less";
+@import "list-group.less";
+@import "panels.less";
+@import "responsive-embed.less";
+@import "wells.less";
+@import "close.less";
+
+// Components w/ JavaScript
+@import "modals.less";
+@import "tooltip.less";
+@import "popovers.less";
+@import "carousel.less";
+
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+@import "theme.less";
+
+#wrap {max-width: 740px; margin: 0 auto; overflow: hidden;}
+#frontpage {max-width: 350px; margin: 15px auto;}
+
+hr.indent {
+	height: 0;
+	border-top: 1px solid #191919;
+	border-bottom: 1px solid #333;
+}
+
+.site-head-default {
+	background: url('../img/steam.png') 80% top no-repeat;
+	padding-bottom: 20px;
+	margin-top:40px;
+	height: 84px;
+
+    h1{
+    	font-size: 125%;
+    	margin-bottom: 0;
+    	line-height: 150%;
+        a {color: #e1e1e1;}
+        a span {font-weight: normal; color: #858585;}
+    }
+
+    #avatar {
+    	float: left;
+    	width: 64px;
+    	margin-right: 15px;
+    	padding-left: 2px;
+    }
+
+    #status {
+        .inchat{color: #62a7e3;}
+        .ingame{color: #9cce59;}
+    }
+}
+
+.site-head-centered {
+	text-align: center;
+	margin-top: 150px;
+	padding-top: 75px;
+	background: url('../img/steam.png') center top no-repeat;
+
+    h1 {
+    	margin-bottom: 25px;
+    	text-shadow: rgba(0,0,0,0.35) 0 2px 3px;
+    	font-size: 45px;
+    	font-weight: 700;
+    	text-transform: capitalize;
+    }
+
+    h1:after {
+    	content: '.';
+    }
+}
+
+
+
+ul.itemlist {
+	margin-left: 5px;
+
+    .item {
+		margin-bottom: 5px;
+    	background: #232323;
+    	border-radius: 5px;
+    	position: relative;
+		border: 1px solid;
+
+		img {max-width: 57px;}
+    }
+
+	.genuine {border-color: #4d7455;}
+	.unique {border-color: #7d6d00;}
+	.vintage {border-color: #476291;}
+}
+
+
+
+.pagination a {
+	background: #232323;
+	border-color: #1f1f1f;
+}
+
+.pagination a:hover {
+	background: #232323;
+}
+
+.active_page{color: #9cce59;}
+
+.site-footer {
+    text-align: center;
+	display: block;
+	padding-top: 10px;
+	border-top: 1px solid #2c2c2c;
+}
+
+.topbar-wrapper {
+  position: relative;
+  height: 40px;
+  margin: 2px 0 5px;
+
+  .topbar {
+    position: absolute;
+    margin: 0;
+    text-align: left;
+    .topbar-inner {padding-left: 5px;padding-right: 10px;}
+    .secondary-nav {padding-right: 10px;}
+  }
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}{% load steamPersona %}{% load cache %}
+
+{% block page %}profile{% endblock %}
+
+{% block content %}
+{% render_profile_head vanity_id %}
+<div class="row">
+	<div class="col-md-12">
+	<ul class="list-inline itemlist">
+	{% for item in bp reversed %}
+		<li class="{{item.get_quality.prettystr|slugify}} item">
+			<a href="#" rel="popover" title="{{item.get_name}}" data-content="{{item.get_description}}">
+				<img src="{{item.get_image}}" width=70 heigh=70 />
+			</a>
+		</li>
+		{% if forloop.counter|divisibleby:50 %}<hr class="linebreaker visible-md visible-lg" />{% endif %}
+	{% endfor %}
+	</ul>
+	</div>
+</div>
+{% endblock %}
